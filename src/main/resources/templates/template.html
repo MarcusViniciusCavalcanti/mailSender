@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-br" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="head">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <title>Caixa de sugestões - Girrafas</title>
+
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/webjars/open-iconic/font/css/open-iconic-bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/style.css}"/>
+</head>
+<body>
+<header th:fragment="header">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" th:href="@{/}"  href="#">Caixa de Sugestões</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" th:href="@{/}" href="#">Home
+                        <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/suggestion}" href="#">Contribuir</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-lg-4">
+                <div class="py-5 text-center">
+
+                    <img id="logo" src="../static/image/logo.png" th:src="@{/image/logo.png}" alt="logo girafas"/>
+
+                    <p class="mt-4" id="description-page">A vida é um prato cheio</p>
+                </div>
+            </div>
+
+            <div class="col-lg-">
+                <div class="py-5 text-center">
+                    <p class="mt-4">
+                        Giraffas é uma rede de fast-food brasileira, fundada no Lago Sul, no Distrito Federal em agosto de 1981
+                        por dois amigos, os empresários Mauro Lacerda e Muniz Neto, com seu primeiro restaurante no comércio
+                        local da QI 09. Seus pratos que incluem arroz, feijão, ovo frito e carnes
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<footer class="my-5 pt-5 text-muted text-center text-small" th:fragment="footer">
+    <p class="mb-1">&copy; 2019 utfpr - Sistema para Internet</p>
+
+    <ul class="list-inline">
+        <li class="list-inline-item">
+            <a th:href="@{/}">Home</a>
+        </li>
+
+        <li class="list-inline-item">
+            <a th:href="@{/suggestion}">Contribuir</a>
+        </li>
+    </ul>
+
+    <script th:src="@{/js/main.js}"></script>
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</footer>
+</body>
+</html>

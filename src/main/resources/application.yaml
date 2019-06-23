@@ -1,0 +1,25 @@
+
+spring:
+  datasource:
+    url: jdbc:h2:file:~/suggestion;DB_CLOSE_DELAY=-1
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+    platform: h2
+  h2:
+    console:
+      enabled: true
+      path: /console
+  mail:
+    default-encoding: utf-8
+    host: mail.girafas.com
+    username: suggetion
+    password: suggestion
+    properties:
+      mail:
+        smtp:
+          port: 25
+    protocol: smtp
+    port: 25
+server:
+  port: 80
