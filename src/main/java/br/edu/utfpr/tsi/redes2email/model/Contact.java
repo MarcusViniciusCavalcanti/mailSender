@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import javax.validation.Valid;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.ArrayList;
@@ -26,6 +27,9 @@ import java.util.List;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date created = new Date();
+
+    @Email
+    private String email;
 
     @Valid
     @OneToMany(mappedBy = "contact",

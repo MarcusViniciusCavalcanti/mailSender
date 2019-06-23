@@ -35,6 +35,21 @@
                     </div>
 
                     <div class="form-group">
+                        <label th:for="'name'">Email:</label>
+
+                        <input th:field="*{contact.email}"
+                               class="form-control"
+                               type="email"
+                               placeholder="email@email.com"
+                               required="required"
+                        />
+                        <p th:each="err : ${#fields.errors('contact.email')}"
+                           th:text="${err}"
+                           class="invalid-feedback"
+                        ></p>
+                    </div>
+
+                    <div class="form-group">
                         <label th:for="'text'">Sugestão:</label>
 
                         <textarea th:field="*{text}"
